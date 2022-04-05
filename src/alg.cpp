@@ -3,8 +3,8 @@
 #include <map>
 #include <stack>
 #include "tstack.h"
-int prior(char w) {
-  switch (w) {
+int prior(char c) {
+  switch (c) {
     case '(':
       return 0;
     case ')':
@@ -20,9 +20,9 @@ int prior(char w) {
   }
   return 0;
 }
-bool search(std::string c, char w) {
-  for (int i = 0; i < c.length(); ++i) {
-    if (c[i] == w) {
+bool search(std::string s, char c) {
+  for (int i = 0; i < s.length(); ++i) {
+    if (s[i] == c) {
       return true;
     }
   }
